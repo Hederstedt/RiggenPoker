@@ -1,4 +1,5 @@
-﻿
+﻿@model IEnumerable<RiggenPoker.Models.UploadImage>
+
 @{
     ViewBag.Title = "Index";
 }
@@ -14,32 +15,45 @@
     Alla överträdelser polisanmäls!
 </h5><br /><br />
 
+@*<div class="container">
+    <div class="row list-group">
 
-@using(Html.BeginForm("Index", "Upload", FormMethod.Post, new
-{
-    enctype = "multipart/form-data"
-}))
-{ <div><img id = "user_img"
-    height = "100"
-    width = "90"
-    style = "border:solid" /> </div>
+        @foreach (var item in Model)
+            {
+            @Html.DisplayFor(modelItem => item.Image_url)
+                <img src="@item.Image_url" />
+            }
+        
+    </div>
+</div>*@
+
+    @using (Html.BeginForm("Index", "Upload", FormMethod.Post, new
+    {
+        enctype = "multipart/form-data"
+    }))
+    { <div>
+        <img id="user_img"
+             height="100"
+             width="90"
+             style="border:solid" />
+    </div>
     <div>
         <input type="file" title="Hitta bild" id="file" name="file" onchange="show(this)" value="Hitta bild" />
     </div>
-        <div>
-            Uppladdad av:
-        </div>
     <div>
-        <input type = "text" id = "txt_id" name = "id" />
+        Uppladdad av:
     </div>
         <div>
-            Bildinnehåll: 
+            <input type="text" id="txt_id" name="id" />
         </div>
-    <div>
-        <input type = "text" id = "txt_name" name = "Name" />
-    </div>
-    <div>
-        <input type="submit" title="Spara" value="Spara bild"  />
-    </div>
-}
+        <div>
+            Bildinnehåll:
+        </div>
+        <div>
+            <input type="text" id="txt_name" name="Name" />
+        </div>
+        <div>
+            <input type="submit" title="Spara" value="Spara bild" />
+        </div>
+    }
 

@@ -176,13 +176,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201605300941101_Populerar databasen.cs" />
-    <Compile Include="Migrations\201605300941101_Populerar databasen.Designer.cs">
-      <DependentUpon>201605300941101_Populerar databasen.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201605301359458_test.cs" />
-    <Compile Include="Migrations\201605301359458_test.Designer.cs">
-      <DependentUpon>201605301359458_test.cs</DependentUpon>
+    <Compile Include="Migrations\201606020946079_int.cs" />
+    <Compile Include="Migrations\201606020946079_int.Designer.cs">
+      <DependentUpon>201606020946079_int.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -279,11 +275,8 @@
     <Content Include="Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201605300941101_Populerar databasen.resx">
-      <DependentUpon>201605300941101_Populerar databasen.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201605301359458_test.resx">
-      <DependentUpon>201605301359458_test.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201606020946079_int.resx">
+      <DependentUpon>201606020946079_int.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

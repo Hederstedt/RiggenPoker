@@ -3,7 +3,7 @@ namespace RiggenPoker.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class Populerardatabasen : DbMigration
+    public partial class _int : DbMigration
     {
         public override void Up()
         {
@@ -109,6 +109,16 @@ namespace RiggenPoker.Migrations
                 .PrimaryKey(t => t.Id)
                 .Index(t => t.Name, unique: true, name: "RoleNameIndex");
             
+            CreateTable(
+                "dbo.UploadImages",
+                c => new
+                    {
+                        Id = c.Int(nullable: false, identity: true),
+                        Image_url = c.String(),
+                        ImageName = c.String(),
+                    })
+                .PrimaryKey(t => t.Id);
+            
         }
         
         public override void Down()
@@ -127,6 +137,7 @@ namespace RiggenPoker.Migrations
             DropIndex("dbo.AspNetUserClaims", new[] { "UserId" });
             DropIndex("dbo.AspNetUsers", "UserNameIndex");
             DropIndex("dbo.Files", new[] { "User_Id" });
+            DropTable("dbo.UploadImages");
             DropTable("dbo.AspNetRoles");
             DropTable("dbo.Results");
             DropTable("dbo.AspNetUserRoles");

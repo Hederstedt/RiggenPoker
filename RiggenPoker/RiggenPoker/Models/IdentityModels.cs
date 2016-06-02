@@ -32,26 +32,24 @@ namespace RiggenPoker.Models
         //{
         //    modelBuilder.HasDefaultSchema("RiggenPoker");
         //}
-          public DbSet<Result> Results { get; set; }
-
-        public DbSet <UploadImage> UploadImages { get; set; }
-        public DbSet<File> Files { get; set; }
+        
 
         //protected override void OnModelCreating(DbModelBuilder modelBuilder)
         //{
         //    modelBuilder.Entity<Result>()
-        //        .
-
-
-
+        //        
 
         //    base.OnModelCreating(modelBuilder);
         //}
         public static ApplicationDbContext Create()
         {
+
             return new ApplicationDbContext();
         }
-  
+        public DbSet<Result> Results { get; set; }
+
+        public DbSet<UploadImage> UploadImages { get; set; }
+        public DbSet<File> Files { get; set; }
 
     }
 

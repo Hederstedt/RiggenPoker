@@ -17,7 +17,8 @@ namespace RiggenPoker.Controllers
         // GET: Upload
         public ActionResult Index()
         {
-
+            
+            
             return View();
         }
 
@@ -28,31 +29,30 @@ namespace RiggenPoker.Controllers
             var allowedExtensions = new[] {
             ".png", ".jpg", ".jpeg"
         };
-            tbl.Id = fc["Id"].ToString();
+            //tbl.Id = fc["Id"].ToString();
             tbl.Image_url = file.ToString(); //getting complete url  
             tbl.ImageName = fc["Name"].ToString();
             var fileName = Path.GetFileName(file.FileName); //getting only file name(ex-ganesh.jpg)  
-            var ext = Path.GetExtension(file.FileName).ToLower(); //getting the extension(ex-.jpg)  
+            var ext = Path.GetExtension(file.FileName).ToLower(); //getting the extension(ex-.jpg) 
+            var guid = Guid.NewGuid().ToString(); // randomizer fileattachment
             if (allowedExtensions.Contains(ext)) //check what type of extension  
             {
                 string name = Path.GetFileNameWithoutExtension(fileName); //getting file name without extension  
-                string myfile = name + "_" + tbl.Id + ext; //appending the name with id  
+                string myfile = name + "_" + guid + ext; //appending the name with id  
                                                            // store the file inside ~/Content/Images/UploadedImages  
                 var path = Path.Combine(Server.MapPath("~/Content/Images/UploadedImages"), myfile);
-                //tbl.Image_url = path;
-                //obj.UploadImages.Add(tbl);
-                obj.UploadImages.AddOrUpdate(
-                    i => i.Id,
-                    new UploadImage { Image_url = path  }
-                   );
-                obj.SaveChanges();
+                tbl.Image_url = path;
+                obj.UploadImages.Add(tbl);
                 file.SaveAs(path);
+                obj.SaveChanges();
+                
             }
             else
             {
                 ViewBag.message = "Går endast att spara bildfiler, t ex: .jpg, .png";
             }
-            return View();
+
+            return View(tbl);
         }
     }
 }
