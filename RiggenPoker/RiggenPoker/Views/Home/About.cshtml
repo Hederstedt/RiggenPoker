@@ -1,9 +1,9 @@
-﻿<div class="container">
+﻿@{
+    ViewBag.Title = "Välkommen till Riggen Poker!";
+}
+<div class="container">
     <div class="row">
-        <div class="col-xs-12">
-            @{
-                ViewBag.Title = "Välkommen till Riggen Poker!";
-            }
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-10">
             <h2 id="text">@ViewBag.Title</h2><br />
             @*<h3>@ViewBag.Message</h3>*@
 
@@ -12,7 +12,8 @@
                 Vi är ett gäng glada amatörer som spelar poker online och tycker att det ibland är lite tråkigt vid borden.
                 Därför startade vi en "privat-turnering" med det fantastiska namnet *Riggen*.
                 Meningen är att stämningen ska vara uppsluppen, no bad feelings, och bara ha roligt när vi spelar.
-                Därför bestämde vi också att "turren" ska gå på fredagar så man kan ta ett glas eller två.<br />
+                Därför bestämde vi också att "turren" ska gå på fredagar så man kan ta ett glas eller två.
+                <br />
                 <br />
 
                 I Riggenturneringen kommer pengarna i 2:a-hand och "att ha roligt" i första hand!!<br />
@@ -22,16 +23,9 @@
                 <br />
             </p>
 
-            <h3 style="color: orangered">Medlemskap</h3>
-            <p id="text">
-                Ansökan att vara med i det exlusiva *Riggen-gänget* kan göras via forumet här på hemsidan.
-                (just nu är det dock stängt för "nya" medlemmar)<br />
-                <br />
-            </p>
-
-            <div id="text">
-
-            </div>
-        </div>
-    </div>
+            @*<img src="https://images3.alphacoders.com/206/206369.jpg" id="aboutBild">*@
+        </div> 
 </div>
+    </div>
+
+<br />

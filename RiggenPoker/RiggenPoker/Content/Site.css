@@ -1,10 +1,13 @@
 ﻿body {
-    padding-top: 45px;
+    padding-top: 35px;
     padding-bottom: 20px;
     background-color: black;
 }
 
 #frontImage {
+    margin-top: -5px;
+    margin-left: -75px;
+
 }
 
 #copy {
@@ -25,23 +28,34 @@ li a {
 }
 
 #sidebar {
-    position: absolute;
     left: 250px;
     width: 0;
     height: 100%;
-    margin-left: 240px;
-    margin-right: 100px;
+    margin-left: -240px;
     font-size: large;
     margin-top: 100px;
+
+}
+
+#kontaktBild {
+    margin-left: 850px;
+    margin-top: -450px;
+    max-width: 100%;
+    height: auto;
+}
+
+#aboutBild {
+    margin-left: 250px;
+    margin-top: 75px;
+    
 }
 
 #searchbar {
-    margin-left: 85%;
 }
 
 #thumbnail {
-    margin-left: -190px;;
-    margin-top: -60px;
+    margin-left: -15px;
+    margin-top: -25px;
 }
 
 .input[type=text] {
@@ -78,8 +92,8 @@ a:focus {
 
 /* Set padding to keep content from hitting the edges */
 .body-content {
-    padding-left: 30px;
-    padding-right: 30px;
+    padding-left: 15px;
+    padding-right: 15px;
 }
 
 /* Override the default bootstrap behavior where horizontal description lists 
