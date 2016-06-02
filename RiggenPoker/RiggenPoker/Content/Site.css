@@ -1,0 +1,120 @@
+﻿body {
+    padding-top: 45px;
+    padding-bottom: 20px;
+    background-color: black;
+}
+
+#frontImage {
+}
+
+#copy {
+    color: white;
+}
+
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+li a {
+    display: block;
+    width: 60px;
+    color: white;
+}
+
+#sidebar {
+    position: absolute;
+    left: 250px;
+    width: 0;
+    height: 100%;
+    margin-left: 240px;
+    margin-right: 100px;
+    font-size: large;
+    margin-top: 100px;
+}
+
+#searchbar {
+    margin-left: 85%;
+}
+
+#thumbnail {
+    margin-left: -190px;;
+    margin-top: -60px;
+}
+
+.input[type=text] {
+    width: 130px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    font-size: 16px;
+    background-color: white;
+    background-image: url('searchicon.png');
+    background-position: 10px 10px; 
+    background-repeat: no-repeat;
+    padding: 12px 20px 12px 40px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+}
+
+/* When the input field gets focus, change its width to 100% */
+input[type=text]:focus {
+    width: 100%;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+a:hover,
+a:focus {
+  color: orangered;
+  text-decoration: none;
+}
+
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+#text{
+    color:white;
+}
+
+#buttonRegisterForm{
+    margin-top: 0.5%;
+    margin-right: 1%;
+    border: 2px solid orangered;
+    background-color: black;
+    color: white;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: x-small;
+    font-weight: bold;
+    border-radius: 5%;
+}
+#Avatar_bildram{
+     width: 300px;
+  height: 300px;
+  border-radius: 50%; /*don't forget prefixes*/
+  background-position: center center;
+  /* as mentioned by Vad: */
+  background-size: cover;
+}

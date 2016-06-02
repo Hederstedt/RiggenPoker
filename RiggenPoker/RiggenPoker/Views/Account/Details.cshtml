@@ -1,0 +1,21 @@
+﻿@model ApplicationUser
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+<dl class="dl-horizontal">
+    @if (Model.Files.Any(f => f.FileType == FileType.Avatar))
+    {
+        <dt>
+            Avatar
+        </dt>
+        
+        <dd>
+            <img id="Avatar_bildram" src="~/File?id=@Model.Files.First(f => f.FileType == FileType.Avatar).FileId" alt="avatar" />
+        </dd>
+    }
+    <dt>
+       
+    </dt>
+</dl>

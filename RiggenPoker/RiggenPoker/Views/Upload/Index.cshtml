@@ -1,0 +1,45 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Bildgalleri</h2>
+
+<h4>Vill du bidra med egna bilder till Riggens bildgalleri?</h4><br />
+<br />
+<h5>
+    Använd nedan formulär för att ladda upp till vår hemsida.<br /><br />
+    OBS! Tänk på att bilderna inte får vara stötande eller kränkande.<br />
+    Administratören kommer att plocka bort olämpligt material.<br /><br />
+    Alla överträdelser polisanmäls!
+</h5><br /><br />
+
+
+@using(Html.BeginForm("Index", "Upload", FormMethod.Post, new
+{
+    enctype = "multipart/form-data"
+}))
+{ <div><img id = "user_img"
+    height = "100"
+    width = "90"
+    style = "border:solid" /> </div>
+    <div>
+        <input type="file" title="Hitta bild" id="file" name="file" onchange="show(this)" value="Hitta bild" />
+    </div>
+        <div>
+            Uppladdad av:
+        </div>
+    <div>
+        <input type = "text" id = "txt_id" name = "id" />
+    </div>
+        <div>
+            Bildinnehåll: 
+        </div>
+    <div>
+        <input type = "text" id = "txt_name" name = "Name" />
+    </div>
+    <div>
+        <input type="submit" title="Spara" value="Spara bild"  />
+    </div>
+}
+
