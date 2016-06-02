@@ -39,7 +39,7 @@ li a {
 
 #kontaktBild {
     margin-left: 850px;
-    margin-top: -450px;
+    margin-top: -250px;
     max-width: 100%;
     height: auto;
 }
@@ -54,7 +54,7 @@ li a {
 }
 
 #thumbnail {
-    margin-left: -15px;
+    /*margin-left: -15px;*/
     margin-top: -25px;
 }
 
