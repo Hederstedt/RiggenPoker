@@ -6,7 +6,7 @@
 
 #frontImage {
     margin-top: -5px;
-    margin-left: -75px;
+    margin-right: 75px;
 
 }
 
@@ -39,15 +39,20 @@ li a {
 
 #kontaktBild {
     margin-left: 850px;
-    margin-top: -450px;
+    margin-top: -250px;
     max-width: 100%;
     height: auto;
 }
 
 #aboutBild {
     margin-left: 250px;
-    margin-top: 75px;
+    margin-top: -32px; 
     
+}
+
+#newsBild {
+    border-radius: 35px;
+
 }
 
 #searchbar {

@@ -32,6 +32,11 @@ namespace RiggenPoker.Controllers
         {
             return View();
         }
+
+        public ActionResult News()
+        {
+            return View();
+        }
         //public ActionResult FileUpload(HttpPostedFileBase file)
         //{
         //    if (file != null)
