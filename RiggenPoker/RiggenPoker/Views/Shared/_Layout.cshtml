@@ -12,8 +12,13 @@
 <body>
         <!-- Sidebar -->
 
-        <div class="col-xs-6 col-sm-3 col-lg-1 sidebar-offcanvas">
-            <div class="row row-offcanvas row-offcanvas-left">
+        <div class="col-xs-6 col-sm-3 col-lg-1">
+            <nav class="navbar-collapse navbar-default" id="navbar">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button></nav>
                 <ul class="sidebar-nav">
                     <li class="navbar-header">
                         <a href="~/Home/Index">
@@ -41,8 +46,7 @@
                     </li>
                     @Html.ActionLink("Admin", "Index", "Account")
                 </ul>
-            </div>
-            </div>
+</div>
 
     @*Sökfunktion
     <input type="search" id="searchbar" name="search" placeholder="Sök...">*@
