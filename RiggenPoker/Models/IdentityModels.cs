@@ -48,8 +48,8 @@ namespace RiggenPoker.Models
         {
             return new ApplicationDbContext();
         }
-  
 
+        public System.Data.Entity.DbSet<RiggenPoker.Models.TournamentResults> TournamentResults { get; set; }
     }
 
 }

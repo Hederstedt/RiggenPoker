@@ -1,0 +1,41 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h4>Resultat:</h4>
+<p class="text-info">
+    Här hittar du resultaten från alla våra Riggen-turneringar, även vår Liveturnering. <br />
+    Andra turneringar finns också här - som Spader Dam.
+</p>
+<ul class="riggen">
+    <li>
+        <ul>
+            <li><a href="~/TournamentResults/Index">Riggen Totalpoäng</a></li>
+            <li>Här hittar du aktuell poängställning samt resultatet från senaste "Riggen"</li>
+        </ul>
+    </li>
+    <li>
+        <ul>
+            <li>
+                @Html.ActionLink("Spader Dam", "SpaderDam", "Results")
+            </li>
+
+            <li>Här hittar du information om Spader Dam.</li>
+        </ul>
+    </li>
+    @*<li>
+            <a href="">In-game Tutorial</a>
+            <ol><li>Opens up the index of the in-game tutorials. Read up on basic details such as the essential information.</li></ol>
+        </li>*@
+    @*<li>
+            <a href="">Reset</a>
+            <ul><li>Your set of Creatures didn't turn out the way you wanted? </li></ul>
+        </li>*@
+    @*<li>
+            <a href="~/Help/ContactForm">Support - Contact Us</a>
+            <ul><li>Send us an email and we will get back to you!</li></ul>
+        </li>*@
+</ul>
+
+
