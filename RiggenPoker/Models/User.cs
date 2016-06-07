@@ -12,7 +12,6 @@ namespace RiggenPoker.Models
 
         public decimal ScoreAtStartOfYear { get; set; }
 
-        //[ForeignKey("User")]
         public virtual ApplicationUser UserName { get; set; }
 
     }

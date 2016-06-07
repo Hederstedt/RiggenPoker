@@ -193,25 +193,22 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201606070934492_ny.cs" />
-    <Compile Include="Migrations\201606070934492_ny.Designer.cs">
-      <DependentUpon>201606070934492_ny.cs</DependentUpon>
+    <Compile Include="Migrations\201606072155575_First.cs" />
+    <Compile Include="Migrations\201606072155575_First.Designer.cs">
+      <DependentUpon>201606072155575_First.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201606071300146_New TournamentDB.cs" />
-    <Compile Include="Migrations\201606071300146_New TournamentDB.Designer.cs">
-      <DependentUpon>201606071300146_New TournamentDB.cs</DependentUpon>
+    <Compile Include="Migrations\201606072322019_Added comments.cs" />
+    <Compile Include="Migrations\201606072322019_Added comments.Designer.cs">
+      <DependentUpon>201606072322019_Added comments.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityManager.cs" />
     <Compile Include="Models\IdentityModels.cs" />
-    <Compile Include="Models\ITodoRepository.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\Result.cs" />
     <Compile Include="Models\RiggenOfTheYear.cs" />
     <Compile Include="Models\ScoreHistory.cs" />
-    <Compile Include="Models\TodoItem.cs" />
-    <Compile Include="Models\TodoRepository.cs" />
     <Compile Include="Models\Tournament.cs" />
     <Compile Include="Models\TournamentResults.cs" />
     <Compile Include="Models\UploadImage.cs" />
@@ -220,9 +217,6 @@
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Content\bootstrap-theme.css" />
-    <Content Include="Content\bootstrap-theme.min.css" />
-    <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\bootstrapTheme-cyborg.css" />
     <Content Include="Content\Images\ErrorPic.jpg" />
@@ -238,10 +232,6 @@
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
-    <Content Include="Content\bootstrap.min.css.map" />
-    <Content Include="Content\bootstrap.css.map" />
-    <Content Include="Content\bootstrap-theme.min.css.map" />
-    <Content Include="Content\bootstrap-theme.css.map" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\JavaScript.js" />
     <None Include="Scripts\jquery-2.2.3.intellisense.js" />
@@ -330,11 +320,11 @@
     <None Include="Project_Readme.html" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201606070934492_ny.resx">
-      <DependentUpon>201606070934492_ny.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201606072155575_First.resx">
+      <DependentUpon>201606072155575_First.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201606071300146_New TournamentDB.resx">
-      <DependentUpon>201606071300146_New TournamentDB.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201606072322019_Added comments.resx">
+      <DependentUpon>201606072322019_Added comments.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

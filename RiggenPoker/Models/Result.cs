@@ -5,7 +5,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-
+/// <summary>
+/// are results model class
+/// </summary>
 namespace RiggenPoker.Models
 {
     public class Result
@@ -16,7 +18,6 @@ namespace RiggenPoker.Models
         public decimal History { get; set; }
         public decimal TotalScore { get; set; }
         public decimal NewScore { get; set; }
-        //[ForeignKey("ApplicationUser")]
         public int UserNameId { get; set; }
         public virtual ApplicationUser UserName { get; set; }
     }
