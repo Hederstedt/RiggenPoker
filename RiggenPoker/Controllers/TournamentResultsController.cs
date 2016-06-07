@@ -8,7 +8,9 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using RiggenPoker.Models;
-
+/// <summary>
+/// To be able to CRUD the Tournament  
+/// </summary>
 namespace RiggenPoker.Controllers
 {
     public class TournamentResultsController : Controller

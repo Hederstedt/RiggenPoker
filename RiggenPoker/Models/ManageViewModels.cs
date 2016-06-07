@@ -2,7 +2,9 @@
 using System.ComponentModel.DataAnnotations;
 using Microsoft.AspNet.Identity;
 using Microsoft.Owin.Security;
-
+/// <summary>
+/// Auto generated Vs
+/// </summary>
 namespace RiggenPoker.Models
 {
     public class IndexViewModel

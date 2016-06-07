@@ -8,7 +8,10 @@ using System.Data.Entity;
 using RiggenPoker.Models;
 using System.Data.Entity.Migrations;
 using System.Web.Hosting;
-
+/// <summary>
+///  The Controller for loading up Images and storing the Url in the dB 
+///  And the file in the Content/Images/UploadedImages folder
+/// </summary>
 namespace RiggenPoker.Controllers
 {
 
@@ -18,8 +21,7 @@ namespace RiggenPoker.Controllers
         private ApplicationDbContext db = new ApplicationDbContext();
         // GET: Upload
         public ActionResult Index()
-        {
-            
+        {          
             return View(db.UploadImages.OrderByDescending(u => u.Id).ToList());
         }
 
@@ -37,14 +39,12 @@ namespace RiggenPoker.Controllers
 
                     if (fileExt.ToLower().EndsWith(".png") || fileExt.ToLower().EndsWith(".jpg") || fileExt.ToLower().EndsWith(".gif"))
                     {
-                       // var guid = Guid.NewGuid().ToString();
                         var filePath = HostingEnvironment.MapPath("~/Content/Images/UploadedImages/") + fnm;
                         var directory = new DirectoryInfo(HostingEnvironment.MapPath("~/Content/Images/UploadedImages/"));
                         if (directory.Exists == false)
                         {
                             directory.Create();
                         }
-                        //ViewBag.FilePath = filePath.ToString();
                         file.SaveAs(filePath);
                         UploadImage pic = new UploadImage()
                         {

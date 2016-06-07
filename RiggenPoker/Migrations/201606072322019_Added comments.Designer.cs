@@ -7,13 +7,13 @@ namespace RiggenPoker.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.3-40302")]
-    public sealed partial class NewTournamentDB : IMigrationMetadata
+    public sealed partial class Addedcomments : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(NewTournamentDB));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(Addedcomments));
         
         string IMigrationMetadata.Id
         {
-            get { return "201606071300146_New TournamentDB"; }
+            get { return "201606072322019_Added comments"; }
         }
         
         string IMigrationMetadata.Source

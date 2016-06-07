@@ -26,6 +26,7 @@ namespace RiggenPoker
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrapTheme-cyborg.css",
+                      "~/Content/bootstrap.min.css",
                       "~/Content/site.css"));
         }
     }

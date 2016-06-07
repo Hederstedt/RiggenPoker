@@ -6,7 +6,7 @@ using System.Web.Http;
 namespace RiggenPoker
 {
     public static class WebApiConfig
-    {
+    {   //This is for routing the incoming api requests 
         public static void Register(HttpConfiguration config)
         {
             config.MapHttpAttributeRoutes();

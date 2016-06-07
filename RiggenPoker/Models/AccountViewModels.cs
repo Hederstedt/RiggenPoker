@@ -1,11 +1,14 @@
 ﻿using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using Microsoft.AspNet.Identity.EntityFramework;
-
+/// <summary>
+/// Here is where you can edit  the View fore registration   
+/// </summary>
 namespace RiggenPoker.Models
-{
+{   
+    #region Unedited Code
     public class ManageUserViewModel
-    {
+    {            
         [Required]
         [DataType(DataType.Password)]
         [Display(Name = "Current password")]
@@ -71,6 +74,9 @@ namespace RiggenPoker.Models
         [Display(Name = "Remember me?")]
         public bool RememberMe { get; set; }
     }
+    #endregion
+
+    #region Edited Code
 
     public class RegisterViewModel
     {
@@ -84,7 +90,7 @@ namespace RiggenPoker.Models
         public string LastName { get; set; }
 
         [Required]
-        [Display(Name = "Alias")]
+        [Display(Name = "Användar Namn")]
         public string UserName { get; set; }
 
         [Required]
@@ -103,7 +109,6 @@ namespace RiggenPoker.Models
         [Compare("Password", ErrorMessage = "Lösenorden matchar inte, var vänlig försök igen")]
         public string ConfirmPassword { get; set; }
     
-        //test kanske kan tas bort sen vi får se
         public ApplicationUser GetUser()
         {
             var user = new ApplicationUser()
@@ -127,9 +132,7 @@ namespace RiggenPoker.Models
             this.UserName = user.UserName;
             this.FirstName = user.FirstName;
             this.LastName = user.LastName;
-            this.Email = user.Email;
-           // this.Files = user.Files;
-            
+            this.Email = user.Email;           
         }
         [Required]
         public string Id { get; set; }
@@ -147,7 +150,7 @@ namespace RiggenPoker.Models
 
         [Required]
         public string Email { get; set; }
-      //  public virtual ICollection<File> Files { get; set; }
+
     }
 
     public class SelectUserRolesViewModel
@@ -206,6 +209,9 @@ namespace RiggenPoker.Models
         [Required]
         public string RoleName { get; set; }
     }
+    #endregion
+
+    #region Unedited Code
 
 
     public class ResetPasswordViewModel
@@ -236,4 +242,5 @@ namespace RiggenPoker.Models
         [Display(Name = "Email")]
         public string Email { get; set; }
     }
+    #endregion
 }
