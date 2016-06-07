@@ -1,0 +1,34 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Skol Arbeten</h2>
+
+
+<p id="test2"></p>
+
+
+@section Scripts {
+ <script>
+     
+     var url = "https://api.nasa.gov/planetary/apod?api_key=NNKOjkoul8n1CH18TWA9gwngW1s1SmjESPjNoUFo";
+     $.ajax({
+         method: 'GET',
+         url: url,
+         dataType: 'json',
+        
+         success: function (result) {
+             alert("skit");
+             //for (var i = 0; i < data.length; i++) {
+             //    $("#test2").append("<p> vad jag hämtar: " + data.length + "</p>")
+             //}
+             //.Title + " " + data[i].Author + 
+             $("#test2").html(result.title);
+         },
+         error: function (callback) { alert(callback.error);}
+     });
+    </script>
+}
+
+

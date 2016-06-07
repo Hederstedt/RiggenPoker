@@ -1,0 +1,69 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.favicon - Riggen</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+
+
+</head>
+<body>
+        <!-- Sidebar -->
+
+        <div class="col-xs-6 col-sm-3 col-lg-1 sidebar-offcanvas">
+            <div class="row row-offcanvas row-offcanvas-left">
+                <ul class="sidebar-nav">
+                    <li class="navbar-header">
+                        <a href="~/Home/Index">
+                            <img src="http://s33.postimg.org/9ysce551r/logga.png" id="thumbnail" alt="Riggen" />
+                        </a>
+                        <br>
+                        <br />
+                        <br />
+                        @Html.Partial("_LoginPartial")<br />
+                        </li>
+                        
+                    <li>
+                        @Html.ActionLink("Bilder", "Index", "Upload")<br/>
+                    </li>
+                    <li>
+                        <a href="#">Nyheter</a><br />
+                    </li>
+                    <li>
+                        <a href="#">Resultat</a><br />
+                    </li>
+                    <li>
+                        @Html.ActionLink("Om oss", "About", "Home")<br />
+                    </li>
+                    <li>
+                        @Html.ActionLink("Kontakt", "Contact", "Home")<br />
+
+                    </li>
+                    <li>
+                    <a href="http://www.olzzon.com/g/g.php?a=s&i=g21-07758-29">Forum</a><br/>
+                    </li>
+                    <li>
+                    @Html.ActionLink("Admin", "Index", "Account")
+                    </li>
+                  
+                </ul>
+            </div>
+            </div>
+
+    @*Sökfunktion
+    <input type="search" id="searchbar" name="search" placeholder="Sök...">*@
+
+        <div class="container body-content">
+            @RenderBody()
+            <hr />
+            <footer>
+                <p id="copy">&copy; @DateTime.Now.Year - Riggen</p>
+            </footer>
+        </div>
+        @Scripts.Render("~/bundles/jquery")
+        @Scripts.Render("~/bundles/bootstrap")
+        @RenderSection("scripts", required: false)
+</body>
+</html>

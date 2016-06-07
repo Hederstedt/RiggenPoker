@@ -1,0 +1,140 @@
+﻿body {
+    padding-top: 35px;
+    padding-bottom: 20px;
+    background-color: black;
+}
+
+#frontImage {
+    margin-top: -5px;
+    margin-left: -75px;
+
+}
+
+#copy {
+    color: white;
+}
+
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+li a {
+    display: block;
+    width: 60px;
+    color: white;
+}
+
+#sidebar {
+    left: 250px;
+    width: 0;
+    height: 100%;
+    margin-left: -240px;
+    font-size: large;
+    margin-top: 100px;
+
+}
+
+#kontaktBild {
+    margin-left: 850px;
+    margin-top: -450px;
+    max-width: 100%;
+    height: auto;
+}
+
+#aboutBild {
+    margin-left: 250px;
+    margin-top: 75px;
+    
+}
+
+#searchbar {
+}
+
+#thumbnail {
+    margin-left: -15px;
+    margin-top: -25px;
+}
+
+.input[type=text] {
+    width: 130px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    font-size: 16px;
+    background-color: white;
+    background-image: url('searchicon.png');
+    background-position: 10px 10px; 
+    background-repeat: no-repeat;
+    padding: 12px 20px 12px 40px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+}
+
+/* When the input field gets focus, change its width to 100% */
+input[type=text]:focus {
+    width: 100%;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+a:hover,
+a:focus {
+  color: orangered;
+  text-decoration: none;
+}
+
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+#text{
+    color:white;
+}
+
+#buttonRegisterForm{
+    margin-top: 0.5%;
+    margin-right: 1%;
+    border: 2px solid orangered;
+    background-color: black;
+    color: white;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: x-small;
+    font-weight: bold;
+    border-radius: 5%;
+}
+
+#Bilder{
+    width : 100%;
+}
+div.polaroid {
+  width: 20%;
+  background-color: white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin-bottom: 25px;
+}
+div.containerText {
+    text-align: center;
+    padding: 10px 20px;
+}
