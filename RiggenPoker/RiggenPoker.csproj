@@ -193,13 +193,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201606072155575_First.cs" />
-    <Compile Include="Migrations\201606072155575_First.Designer.cs">
-      <DependentUpon>201606072155575_First.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201606072322019_Added comments.cs" />
-    <Compile Include="Migrations\201606072322019_Added comments.Designer.cs">
-      <DependentUpon>201606072322019_Added comments.cs</DependentUpon>
+    <Compile Include="Migrations\201606080758472_Lagt till user igen.cs" />
+    <Compile Include="Migrations\201606080758472_Lagt till user igen.Designer.cs">
+      <DependentUpon>201606080758472_Lagt till user igen.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -320,11 +316,8 @@
     <None Include="Project_Readme.html" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201606072155575_First.resx">
-      <DependentUpon>201606072155575_First.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201606072322019_Added comments.resx">
-      <DependentUpon>201606072322019_Added comments.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201606080758472_Lagt till user igen.resx">
+      <DependentUpon>201606080758472_Lagt till user igen.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

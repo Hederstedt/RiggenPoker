@@ -2,11 +2,11 @@
 @using Microsoft.AspNet.Identity
 @if (Request.IsAuthenticated)
 {
-    using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id = "logoutForm", @class = "navbar-right" }))
+    using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id = "logoutForm", @class = "navbar-left" }))
     {
     @Html.AntiForgeryToken()
 
-    <ul class="sidebar-nav">
+    <ul id="partialUl">
         <li>           
            @{
                var imgUrl = Url.Content("~/Content/Images/profile/" + User.Identity.GetUserName() + ".png") + "?time=" + DateTime.Now.ToString();
@@ -20,6 +20,10 @@
         <li>
             <a href="javascript:document.getElementById('logoutForm').submit()">Log off</a><br/>
         </li>
+        @if (User.Identity.GetUserName() == "Admin")
+        {
+            <li>@Html.ActionLink("Admin", "Index", "Account")</li>
+        }
     </ul>
     }
 }

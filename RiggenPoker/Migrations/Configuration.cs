@@ -41,7 +41,7 @@ namespace RiggenPoker.Migrations
             // Be careful here - you  will need to use a password which will 
             // be valid under the password rules for the application, 
             // or the process will abort:
-            success = idManager.CreateUser(newUser, "");
+            success = idManager.CreateUser(newUser, "Abc123!");
             if (!success) return success;
 
             success = idManager.AddUserToRole(newUser.Id, "Admin");
@@ -54,3 +54,4 @@ namespace RiggenPoker.Migrations
         }
     }
 }
+

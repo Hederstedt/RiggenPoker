@@ -7,13 +7,13 @@ namespace RiggenPoker.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.3-40302")]
-    public sealed partial class First : IMigrationMetadata
+    public sealed partial class Lagttilluserigen : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(First));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(Lagttilluserigen));
         
         string IMigrationMetadata.Id
         {
-            get { return "201606072155575_First"; }
+            get { return "201606080758472_Lagt till user igen"; }
         }
         
         string IMigrationMetadata.Source

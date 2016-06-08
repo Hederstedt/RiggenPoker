@@ -2,6 +2,7 @@
     padding-top: 35px;
     padding-bottom: 20px;
     background-color: black;
+    color: white;
 }
 
 #frontImage {
@@ -80,6 +81,7 @@ a:focus {
 .body-content {
     padding-left: 15px;
     padding-right: 15px;
+    color: white;
 }
 
 /* Override the default bootstrap behavior where horizontal description lists 
@@ -123,6 +125,7 @@ div.polaroid {
 div.containerText {
     text-align: center;
     padding: 10px 20px;
+    color: dimgrey;
 }
 
 
@@ -170,4 +173,11 @@ div.containerText {
     transition: 0s;
     left: 150px;
   }
+}
+
+#partialUl {
+    list-style-type: none;
+    border: thick solid orangered;
+    border-radius: 5%;
+    margin: 2%;
 }
