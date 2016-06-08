@@ -14,28 +14,14 @@
     color: white;
 }
 
-
-/*ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
+.jumbotron {
+    background-color: black;
 }
 
-li a {
-    display: block;
-    width: 60px;
-    color: white;
+.navbar-default {
+    background-color: black;
+    border: none;
 }
-
-#sidebar {
-    left: 250px;
-    width: 0;
-    height: 100%;
-    margin-left: -240px;
-    font-size: large;
-    margin-top: 100px;
-
-}*/
 
 #kontaktBild {
     margin-left: 850px;
