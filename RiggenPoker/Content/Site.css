@@ -5,9 +5,9 @@
 }
 
 #frontImage {
-    margin-top: -5px;
-    margin-left: -75px;
-
+    /*margin-top: -5px;
+    margin-left: -75px;*/
+    /*Bortkommenterat då bild ej blir centrerad och responsiv*/
 }
 
 #copy {
@@ -15,7 +15,7 @@
 }
 
 
-ul {
+/*ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -35,7 +35,7 @@ li a {
     font-size: large;
     margin-top: 100px;
 
-}
+}*/
 
 #kontaktBild {
     margin-left: 850px;
@@ -54,8 +54,8 @@ li a {
 }
 
 #thumbnail {
-    margin-left: -15px;
-    margin-top: -25px;
+    /*margin-left: -15px;
+    margin-top: -25px;*/
 }
 
 .input[type=text] {
@@ -137,4 +137,51 @@ div.polaroid {
 div.containerText {
     text-align: center;
     padding: 10px 20px;
+}
+
+
+#sidebar-wrapper {
+  top: 52px;
+  left: -150px;
+  width: 150px;
+  background-color: black; 
+  color: white;
+  position: fixed;
+  height: 100%;
+  z-index: 1;
+}
+.sidebar-nav {
+  position: absolute;
+  top: 0;
+  margin: 0;
+  padding: 0;
+  width: 200px;
+  list-style: none;
+}
+.sidebar-nav li {
+  text-indent: 20px;
+  line-height: 50px;
+}
+.sidebar-nav li a {
+  color: white;
+  display: block;
+  text-decoration: none;
+}
+.sidebar-nav li a:hover {
+  background: rgba(255,255,255,0.25);
+  color: orangered;
+  text-decoration: none;
+}
+.sidebar-nav li a:active, .sidebar-nav li a:focus {
+  text-decoration: none;
+}
+#sidebar-wrapper.sidebar-toggle {
+  transition: all 0.3s ease-out;
+  margin-left: -150px;
+}
+@media (min-width: 768px) {
+  #sidebar-wrapper.sidebar-toggle {
+    transition: 0s;
+    left: 150px;
+  }
 }

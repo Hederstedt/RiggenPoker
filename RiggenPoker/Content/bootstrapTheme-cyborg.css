@@ -4162,7 +4162,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   position: relative;
   min-height: 50px;
   margin-bottom: 20px;
-  border: 1px solid transparent;
+  /*border: 1px solid transparent;*/
 }
 @media (min-width: 768px) {
   .navbar {
@@ -4488,8 +4488,8 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   }
 }
 .navbar-default {
-  background-color: #060606;
-  border-color: #282828;
+  /*background-color: #060606;
+  border-color: #282828;*/
 }
 .navbar-default .navbar-brand {
   color: #ffffff;
@@ -6503,11 +6503,14 @@ button.close {
 .modal-footer:after {
   clear: both;
 }
-.center-block {
+
+/*Bortkommenterat då det overridar Site.css*/
+/*.center-block {
   display: block;
   margin-left: auto;
   margin-right: auto;
-}
+}*/
+
 .pull-right {
   float: right !important;
 }

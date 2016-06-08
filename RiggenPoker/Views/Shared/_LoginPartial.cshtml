@@ -15,7 +15,7 @@
             <img src="@imgUrl" height="50" width="50"/>
         </li>
         <li>
-            @Html.ActionLink("Hello " + User.Identity.GetUserName() + "!", "Index", "Manage", routeValues: null, htmlAttributes: new { title = "Manage" })
+            @Html.ActionLink("Välkommen " + User.Identity.GetUserName() + "!", "Index", "Manage", routeValues: null, htmlAttributes: new { title = "Manage" })
         </li>
         <li>
             <a href="javascript:document.getElementById('logoutForm').submit()">Log off</a><br/>
@@ -25,7 +25,5 @@
 }
 else
 {
-    <ul class="sidebar-nav">
-        <li>@Html.ActionLink("Logga in", "Login", "Account", routeValues: null, htmlAttributes: new { id = "loginLink" })</li>
-    </ul>
+        @Html.ActionLink("Logga in", "Login", "Account", routeValues: null, htmlAttributes: new { id = "loginLink" })
 }
