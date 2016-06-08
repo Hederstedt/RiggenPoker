@@ -2,7 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
-
+/// <summary>
+/// Are model for Uploaded Images
+/// </summary>
 namespace RiggenPoker.Models
 {
     public class UploadImage

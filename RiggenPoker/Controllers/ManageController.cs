@@ -9,7 +9,9 @@ using Microsoft.Owin.Security;
 using RiggenPoker.Models;
 using System.IO;
 using System.Web.Hosting;
-
+/// <summary>
+///  Some is auto generated but did all the work on upload photo and some in the helpers
+/// </summary>
 namespace RiggenPoker.Controllers
 {
     [Authorize]

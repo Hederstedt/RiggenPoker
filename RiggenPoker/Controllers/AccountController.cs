@@ -13,12 +13,18 @@ using System.Collections.Generic;
 using static RiggenPoker.Controllers.ManageController;
 using System.Net;
 using System.Data.Entity;
-
+/// <summary>
+/// Here is the controller for your account some is auto generated whit Mvc 5 
+/// but did a lot of changes so that the admin can create and delete users. 
+/// </summary>
 namespace RiggenPoker.Controllers
 {
+       
+
     [Authorize]
     public class AccountController : Controller
     {
+        #region Unedited Code
         private ApplicationSignInManager _signInManager;
         private ApplicationUserManager _userManager;
         private ApplicationDbContext db = new ApplicationDbContext();
@@ -137,10 +143,14 @@ namespace RiggenPoker.Controllers
                     return View(model);
             }
         }
+        #endregion
+        //here is were i did a lot of work
+        #region Edited code
+
 
         //
         // GET: /Account/Register
-    //    [Authorize(Roles = "Admin")]
+        [Authorize(Roles = "Admin")]
         public ActionResult Register()
         {
             return View();
@@ -149,13 +159,12 @@ namespace RiggenPoker.Controllers
         //
         // POST: /Account/Register
         [HttpPost]
-     //   [Authorize(Roles = "Admin")]
+        [Authorize(Roles = "Admin")]
         [ValidateAntiForgeryToken]
         public async Task<ActionResult> Register(RegisterViewModel model,HttpPostedFileBase upload)
         {
             if (ModelState.IsValid)
-            {
-                //var user = new ApplicationUser { UserName = model.UserName,LastName = model.LastName,FirstName = model.FirstName,UserImage = model.UserImage, Email = model.Email };
+            {              
                 var user = model.GetUser();
                 var result = await UserManager.CreateAsync(user, model.Password);
                 if (result.Succeeded)
@@ -170,13 +179,13 @@ namespace RiggenPoker.Controllers
 
                     return RedirectToAction("Index", "Account");
                 }
-                //AddErrors(result);
+               
             }
 
             // If we got this far, something failed, redisplay form
             return View(model);
         }
-    //    [Authorize(Roles = "Admin")]
+        [Authorize(Roles = "Admin")]
         public ActionResult Details(string id)
         {
             if (id == null)
@@ -193,7 +202,7 @@ namespace RiggenPoker.Controllers
             return View(user);
         }
 
-     //   [Authorize(Roles = "Admin")]
+        [Authorize(Roles = "Admin")]
         public ActionResult Index()
         {
             var Db = new ApplicationDbContext();
@@ -207,7 +216,7 @@ namespace RiggenPoker.Controllers
             return View(model);
         }
 
-     //   [Authorize(Roles = "Admin")]
+        [Authorize(Roles = "Admin")]
         public ActionResult Edit(string id, ManageMessageId? Message = null)
         {
             var Db = new ApplicationDbContext();
@@ -220,7 +229,7 @@ namespace RiggenPoker.Controllers
 
 
         [HttpPost, ActionName("Edit")]
-     //   [Authorize(Roles = "Admin")]
+        [Authorize(Roles = "Admin")]
         [ValidateAntiForgeryToken]
         public async Task<ActionResult> Edit(ApplicationUser model, HttpPostedFileBase upload)
         {
@@ -244,7 +253,7 @@ namespace RiggenPoker.Controllers
             return View(model);
         }
 
-       // [Authorize(Roles = "Admin")]
+        [Authorize(Roles = "Admin")]
         public ActionResult Delete(string id = null)
         {
             var Db = new ApplicationDbContext();
@@ -260,7 +269,7 @@ namespace RiggenPoker.Controllers
 
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
-     //   [Authorize(Roles = "Admin")]
+        [Authorize(Roles = "Admin")]
         public ActionResult DeleteConfirmed(string id)
         {
             var Db = new ApplicationDbContext();
@@ -270,7 +279,7 @@ namespace RiggenPoker.Controllers
             return RedirectToAction("Index");
         }
 
-     //   [Authorize(Roles = "Admin")]
+        [Authorize(Roles = "Admin")]
         public ActionResult UserRoles(string id)
         {
             var Db = new ApplicationDbContext();
@@ -281,7 +290,7 @@ namespace RiggenPoker.Controllers
 
 
         [HttpPost]
-     //   [Authorize(Roles = "Admin")]
+        [Authorize(Roles = "Admin")]
         [ValidateAntiForgeryToken]
         public ActionResult UserRoles(SelectUserRolesViewModel model)
         {
@@ -302,6 +311,11 @@ namespace RiggenPoker.Controllers
             }
             return View();
         }
+        #endregion
+
+        #region Unedited Code
+
+
         //
         // GET: /Account/ConfirmEmail
         [AllowAnonymous]
@@ -467,9 +481,10 @@ namespace RiggenPoker.Controllers
 
             base.Dispose(disposing);
         }
+        #endregion
 
         #region Helpers
-   
+
 
         private IAuthenticationManager AuthenticationManager
         {
@@ -497,6 +512,7 @@ namespace RiggenPoker.Controllers
         }
 
    
-        #endregion
+      #endregion
     }
-}
+
+}  

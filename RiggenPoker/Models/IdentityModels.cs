@@ -4,7 +4,9 @@ using System.Threading.Tasks;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
 using System.Collections.Generic;
-
+/// <summary>
+/// the dbContext Model here you can alter what will be stored in the database  
+/// </summary>
 namespace RiggenPoker.Models
 {
     // You can add profile data for the user by adding more properties to your ApplicationUser class, please visit http://go.microsoft.com/fwlink/?LinkID=317594 to learn more.
@@ -27,29 +29,16 @@ namespace RiggenPoker.Models
     {
         public ApplicationDbContext()
             : base("RiggenPoker", throwIfV1Schema: false) { }
-        //protected override void OnModelCreating(DbModelBuilder modelBuilder)
-        //{
-        //    modelBuilder.HasDefaultSchema("RiggenPoker");
-        //}
+
         public DbSet<Result> Results { get; set; }
         public DbSet <UploadImage> UploadImages { get; set; }
 
-        //protected override void OnModelCreating(DbModelBuilder modelBuilder)
-        //{
-        //    modelBuilder.Entity<Result>()
-        //        .
-
-
-
-
-        //    base.OnModelCreating(modelBuilder);
-        //}
         public static ApplicationDbContext Create()
         {
             return new ApplicationDbContext();
         }
-  
 
+        public System.Data.Entity.DbSet<RiggenPoker.Models.TournamentResults> TournamentResults { get; set; }
     }
 
 }

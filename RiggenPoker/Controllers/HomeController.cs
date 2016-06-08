@@ -4,7 +4,9 @@ using System.IO;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-
+/// <summary>
+/// The startup page we added the Error ActionResult here for a nice 404 
+/// </summary>
 namespace RiggenPoker.Controllers
 {
     

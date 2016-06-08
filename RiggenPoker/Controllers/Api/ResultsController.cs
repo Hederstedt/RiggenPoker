@@ -9,7 +9,11 @@ using System.Net.Http;
 using System.Web.Http;
 using System.Web.Http.Description;
 using RiggenPoker.Models;
+/// <summary>
+/// This controller is fore are web api it is a easy way to publich things/data from are database 
+/// Using Html Get/ Post/ Put/ Delete.
 
+/// </summary>
 namespace RiggenPoker.Controllers.Api
 {
     public class ResultsController : ApiController
@@ -36,6 +40,8 @@ namespace RiggenPoker.Controllers.Api
         }
 
         // PUT: api/Results/5
+        //Using the rolls I have created so u need to be logged in for accessing some areas  
+        [Authorize(Roles ="Admin")]
         [ResponseType(typeof(void))]
         public IHttpActionResult PutResult(int id, Result result)
         {
@@ -71,6 +77,8 @@ namespace RiggenPoker.Controllers.Api
         }
 
         // POST: api/Results
+        //Using the rolls I have created so u need to be logged in for accessing some areas  
+        [Authorize(Roles = "Admin")]
         [ResponseType(typeof(Result))]
         public IHttpActionResult PostResult(Result result)
         {
@@ -86,6 +94,8 @@ namespace RiggenPoker.Controllers.Api
         }
 
         // DELETE: api/Results/5
+        //Using the rolls I have created so u need to be logged in for accessing some areas  
+        [Authorize(Roles = "Admin")]
         [ResponseType(typeof(Result))]
         public IHttpActionResult DeleteResult(int id)
         {
